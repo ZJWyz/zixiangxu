@@ -30,23 +30,24 @@
 <h2>Contact</h2>
 <p>Email: <a href='mailto:zxxu8023@qq.com'>zxxu8023@qq.com</a></p>
 
-    <div class="hr"></div>
-    <p class="small">
-      © 2026 Zixiang Xu. Hosted on GitHub Pages.
-     <script data-goatcounter="https://zjwyz.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-      <div class="site-counter">
-  Total visits: <span id="gc-total">—</span>
-</div>
+   <div class="hr"></div>
 
+<footer class="small">
+  © 2026 Zixiang Xu. Hosted on GitHub Pages.
+  &nbsp;·&nbsp;
+  Total visits: <span id="gc-total">—</span>
+</footer>
+
+<!-- 统计上报（你原来这段没问题，建议写全 https） -->
+<script data-goatcounter="https://zjwyz.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+
+<!-- 在页面上显示总访问量 -->
 <script>
-  (function () {
-    const code = "https://zjwyz.goatcounter.com/count"; // 替换成你的 GoatCounter code
-    fetch(`https://${code}.goatcounter.com/counter/TOTAL.json`)
-      .then(r => r.json())
-      .then(d => { document.getElementById('gc-total').textContent = d.count; })
-      .catch(() => {});
-  })();
+  fetch("https://zjwyz.goatcounter.com/counter/TOTAL.json")
+    .then(r => r.json())
+    .then(d => { document.getElementById("gc-total").textContent = d.count; })
+    .catch(err => { console.log("GoatCounter counter error:", err); });
 </script>
   </div>
 </main>
