@@ -91,12 +91,17 @@
 </ol>
 
 
-    <div class="hr"></div>
-    <p class="small">
-      © 2026 Zixiang Xu. Hosted on GitHub Pages.
-      <!-- Optional analytics (GoatCounter): replace YOURCODE and uncomment. -->
-      <!-- <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
-    </p>
+   <!-- 统计上报（你原来这段没问题，建议写全 https） -->
+<script data-goatcounter="https://zjwyz.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+
+<!-- 在页面上显示总访问量 -->
+<script>
+  fetch("https://zjwyz.goatcounter.com/counter/TOTAL.json")
+    .then(r => r.json())
+    .then(d => { document.getElementById("gc-total").textContent = d.count; })
+    .catch(err => { console.log("GoatCounter counter error:", err); });
+</script>
   </div>
 </main>
 </body>
